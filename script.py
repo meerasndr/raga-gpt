@@ -1,6 +1,5 @@
 import os
 import sys
-from time import sleep
 from dotenv import load_dotenv
 from langchain.llms import OpenAI
 from langchain import PromptTemplate
@@ -27,7 +26,6 @@ async def root():
 		print("There's an unforeseen error. Try again later. \n Thanks for your patience. ")
 		exit(0)
 	raga_list = raga_list_csv.replace(" ", "").strip().split(',')
-	message = ''
 	return {"message": raga_list}
 
 if __name__ == "__main__":
